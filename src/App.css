@@ -738,6 +738,13 @@ button a {
     align-items: center;
   }
 
+  .project-card {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    margin-left: 15%;
+  }
+
+
   .projects .button {
     display: none;
     text-align: start;
