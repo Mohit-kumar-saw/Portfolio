@@ -426,8 +426,8 @@ const App = () => {
         <div className="mid-footer">
           <div className="mid-left">
             <p>
-              Unleash your artistic prowess to fashion exquisite products that
-              radiate beauty.
+              Unleash your artistic prowess to fashion exquisite products
+              that radiate beauty.
             </p>
             <button className="btn">
               <p>

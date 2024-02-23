@@ -587,7 +587,42 @@ button a {
   font-size: 16px;
 }
 
+.map .map-bottom .map-left {
+  overflow: hidden;
+  width: 50%;
+  height: 400px;
+  margin-bottom: 10px;
+}
+.map .map-bottom .map-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 50%;
+  height: 400px;
+}
+
+.map .map-bottom .map-right input {
+  margin-top: 10px;
+}
+
 /* footer */
+
+/* .footer {
+  display: flex;
+  height: 1000px;
+} */
+
+/* .footer .mid-footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+} */
+
+/* .footer .mid-footer .mid-left {
+  width: 100%;
+} */
 
 .footer {
   background-color: #121212;
@@ -596,14 +631,24 @@ button a {
   flex-direction: column;
   padding: 30px;
   width: 100%;
+  height: 500px;
+  overflow: hidden;
   align-items: center;
   padding: 40px;
   gap: 30px;
 }
 .footer .mid-footer {
-  width: 70%;
+  width: 80%;
   display: flex;
   gap: 30px;
+}
+
+.footer .mid-left {
+  width: 70%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .footer .mid-footer .mid-left button {
@@ -736,11 +781,18 @@ button a {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 80px;
   }
 
   .projects .button {
     display: none;
     text-align: start;
+  }
+
+  .project-card {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    margin-left: 15%;
   }
 
   .container {
@@ -779,12 +831,12 @@ button a {
   .footer {
     /* height: fit-content; */
     display: flex;
-    height: 900px;
+    height: fit-content;
   }
 
   .footer .mid-footer {
     width: 100%;
-    height: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
   }
@@ -804,6 +856,10 @@ button a {
     padding: 0 3vw;
   }
 
+  .text.sec-text {
+    width: 35%;
+  }
+
   .info {
     flex-direction: column;
     justify-content: center;
@@ -820,13 +876,13 @@ button a {
   }
 
   .text {
-    font-size: 28px;
+    font-size: 34px;
   }
 
   .info-right {
     margin-top: 20px;
     flex-direction: row;
-    font-size: 10px;
+    font-size: 13px;
     gap: 10px;
   }
 
@@ -836,7 +892,7 @@ button a {
   }
 
   .contact > button {
-    font-size: 11px;
+    font-size: 13px;
   }
 
   .btn {
@@ -855,52 +911,29 @@ button a {
     margin: 0;
     margin-top: 20%;
     height: fit-content;
+    display: grid;
+  }
+
+  .projects .project-card {
+    grid-template-columns: repeat(2, 2fr);
+    margin-left: 4%;
   }
 
   .map {
     margin-top: 10%;
   }
 
-  .map .map-bottom {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-  }
-
-  .map .map-bottom .map-left {
-    overflow: hidden;
-    width: 50%;
-    height: 400px;
-    margin-bottom: 10px;
-  }
-  .map .map-bottom .map-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 50%;
-    height: 400px;
-  }
-
-  .map .map-bottom .map-right input {
-    margin-top: 10px;
-  }
-
   .footer {
-    display: flex;
-    height: 1000px;
+    height: fit-content;
   }
 
   .footer .mid-footer {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
   }
 
   .footer .mid-footer .mid-left {
-    width: 100%;
+    width: 90%;
   }
 }
 
