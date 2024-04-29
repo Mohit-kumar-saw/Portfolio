@@ -13,6 +13,7 @@ import { FaReact } from "react-icons/fa";
 import { BiLogoCss3, BiLogoJavascript } from "react-icons/bi";
 import { SiTailwindcss, SiMongodb } from "react-icons/si";
 import { data } from "./data/project";
+import { SiSocketdotio } from "react-icons/si";
 
 import profile_pic from "./image/profile_pic.png";
 
@@ -356,6 +357,9 @@ const App = () => {
                 <i className="mongodb">
                   <SiMongodb />
                 </i>
+                <i className="mongodb">
+                <SiSocketdotio />
+                                </i>
               </div>
             </div>
           </div>
