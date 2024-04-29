@@ -14,6 +14,7 @@ import { BiLogoCss3, BiLogoJavascript } from "react-icons/bi";
 import { SiTailwindcss, SiMongodb } from "react-icons/si";
 import { data } from "./data/project";
 import { SiSocketdotio } from "react-icons/si";
+import { SiRedux } from "react-icons/si";
 
 import profile_pic from "./image/profile_pic.png";
 
@@ -323,6 +324,9 @@ const App = () => {
                 <i className="react">
                   <FaReact />
                 </i>
+                <i className="react">
+                <SiRedux />      
+                          </i>
                 <i className="gsap">
                   <img
                     src="https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg"
