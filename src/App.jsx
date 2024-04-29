@@ -16,7 +16,7 @@ import { data } from "./data/project";
 import { SiSocketdotio } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 
-import profile_pic from "./image/profile_pic.png";
+import profile_pic from "./image/profile_pic.jpg";
 
 const App = () => {
   const cardRef = useRef(null);
