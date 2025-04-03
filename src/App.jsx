@@ -7,7 +7,7 @@ import {
   AiFillHtml5,
 } from "react-icons/ai";
 import { DiNodejs } from "react-icons/di";
-import { FaRegPaperPlane } from "react-icons/fa6";
+import { FaRegPaperPlane, FaFigma } from "react-icons/fa6";
 import { FiMail } from "react-icons/fi";
 import { FaReact } from "react-icons/fa";
 import { BiLogoCss3, BiLogoJavascript } from "react-icons/bi";
@@ -29,8 +29,6 @@ const App = () => {
   useEffect(() => {
     const tl = gsap.timeline();
 
-    // tl.set(cardRef.current, {x: -300, opacity: 0 });
-
     tl.fromTo(
       cardRef.current,
       { x: -300, opacity: 0 },
@@ -41,8 +39,8 @@ const App = () => {
         scrollTrigger: {
           trigger: cardRef.current,
           scrub: true,
-          start: "top 90%",
-          end: "bottom 40%",
+          start: "top bottom",
+          end: "top center",
         },
       }
     );
@@ -71,8 +69,8 @@ const App = () => {
         scrollTrigger: {
           trigger: cardRef2.current,
           scrub: true,
-          start: "top 90%",
-          end: "bottom 60%",
+          start: "top bottom",
+          end: "top center",
         },
       }
     );
@@ -277,93 +275,277 @@ const App = () => {
           </p>
         </div>
 
-        <div id="sec2" className="section2">
-          <div className="left-sec">
-            <div ref={cardRef} className="card">
-              <h3 className="card-heading">Frontend Developer</h3>
-              <div className="logos">
-                <i className="html">
-                  <AiFillHtml5 />
-                </i>
-                <i className="css">
-                  <BiLogoCss3 />
-                </i>
-                <i className="js">
-                  <BiLogoJavascript />
-                </i>
-                <i className="tw">
-                  <SiTailwindcss />
-                </i>
-                <i className="react">
-                  <FaReact />
-                </i>
-                <i className="gsap">
-                  <img
-                    src="https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg"
-                    width={"40px"}
-                    alt=""
-                  />
-                </i>
-              </div>
-            </div>
-            <div className="card2">
-              <h3 className="card-heading">Frontend Developer</h3>
-              <div className="logos">
-                <i className="html">
-                  <AiFillHtml5 />
-                </i>
-                <i className="css">
-                  <BiLogoCss3 />
-                </i>
-                <i className="js">
-                  <BiLogoJavascript />
-                </i>
-                <i className="tw">
-                  <SiTailwindcss />
-                </i>
-                <i className="react">
-                  <FaReact />
-                </i>
-                <i className="react">
-                <SiRedux />      
-                          </i>
-                <i className="gsap">
-                  <img
-                    src="https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg"
-                    width={"40px"}
-                    alt=""
-                  />
-                </i>
-              </div>
-            </div>
-            <div className="card2">
-              <h3 className="card-heading">Backend Devlopment</h3>
+        <div className="experience-section">
+          <div className="experience-header">
+            <h2>Experience</h2>
+            <div className="header-line"></div>
+          </div>
+          
+          <div className="experience-timeline">
+            <div className="timeline-item" ref={cardRef}>
+              <div className="timeline-dot"></div>
+              <div className="timeline-date">September 2024 - Present</div>
+              <div className="timeline-content">
+                <h3>Full Stack Developer</h3>
+                <h4>InkHub</h4>
+                <p className="location">Ranchi, India</p>
+                
+                <ul className="achievements">
+                  <li>
+                    <span className="bullet">•</span>
+                    Developed a highly efficient admin dashboard to streamline business operations and enhance productivity
+                  </li>
+                  <li>
+                    <span className="bullet">•</span>
+                    Integrated Shopify API to manage e-commerce operations directly within the dashboard
+                  </li>
+                  <li>
+                    <span className="bullet">•</span>
+                    Improved operational efficiency by 60%
+                  </li>
+                  <li>
+                    <span className="bullet">•</span>
+                    Reduced time spent on manual tasks by automating core processes
+                  </li>
+                </ul>
 
-              <div className="logos">
-                <i className="nodejs">
-                  <DiNodejs />
-                </i>
-                <i className="mongodb">
-                  <SiMongodb />
-                </i>
+                <div className="tech-stack">
+                  <div className="tech-item">
+                    <FaReact />
+                    <span>React</span>
+                  </div>
+                  <div className="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="Node.js" />
+                    <span>Node.js</span>
+                  </div>
+                  <div className="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB" />
+                    <span>MongoDB</span>
+                  </div>
+                  <div className="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS" />
+                    <span>AWS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="timeline-item" ref={cardRef2}>
+              <div className="timeline-dot"></div>
+              <div className="timeline-date">March 2024 - May 2024</div>
+              <div className="timeline-content">
+                <h3>Full Stack Developer Intern</h3>
+                <h4>SEO Horizon</h4>
+                <p className="location">Ranchi, India</p>
+                
+                <ul className="achievements">
+                  <li>
+                    <span className="bullet">•</span>
+                    Working on full-stack development using the MERN stack
+                  </li>
+                  <li>
+                    <span className="bullet">•</span>
+                    Creating a Chrome extension to enhance the user experience and functionality
+                  </li>
+                  <li>
+                    <span className="bullet">•</span>
+                    Participating in code reviews and contributing to team discussions and decision-making processes
+                  </li>
+                </ul>
+
+                <div className="tech-stack">
+                  <div className="tech-item">
+                    <FaReact />
+                    <span>React</span>
+                  </div>
+                  <div className="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="Node.js" />
+                    <span>Node.js</span>
+                  </div>
+                  <div className="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB" />
+                    <span>MongoDB</span>
+                  </div>
+                  <div className="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/chrome-5.svg" alt="Chrome Extension" />
+                    <span>Chrome Ext</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="sec-line"></div>
-          <div className="right-sec">
-            <div ref={cardRef2} className="card">
-              <h3 className="card-heading">Backend Devlopment</h3>
+        </div>
 
-              <div className="logos">
-                <i className="nodejs">
-                  <DiNodejs />
+        <div id="sec2" className="skills-section">
+          <div className="skills-header">
+            <h2>SKILLS</h2>
+          </div>
+          <div className="skills-container">
+            <div className="skill-category-wrapper">
+              <div className="category-title">Programming Languages</div>
+              <div className="skills-grid">
+                <div className="skill-item">
+                  <i className="java">
+                    <img src="https://cdn.worldvectorlogo.com/logos/java-4.svg" alt="Java" />
+                  </i>
+                  <span>Java</span>
+                </div>
+                <div className="skill-item">
+                  <i className="cpp">
+                    <img src="https://cdn.worldvectorlogo.com/logos/c.svg" alt="C++" />
+                  </i>
+                  <span>C++</span>
+                </div>
+                <div className="skill-item">
+                  <i className="c">
+                    <img src="https://cdn.worldvectorlogo.com/logos/c-1.svg" alt="C" />
+                  </i>
+                  <span>C</span>
+                </div>
+                <div className="skill-item">
+                  <i className="python">
+                    <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Python" />
+                  </i>
+                  <span>Python</span>
+                </div>
+                <div className="skill-item">
+                  <i className="typescript">
+                    <img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" alt="TypeScript" />
+                  </i>
+                  <span>TypeScript</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="skill-category-wrapper">
+              <div className="category-title">Front-end</div>
+              <div className="skills-grid">
+                <div className="skill-item">
+                <i className="js">
+                  <BiLogoJavascript />
                 </i>
-                <i className="mongodb">
-                  <SiMongodb />
+                  <span>JavaScript</span>
+                </div>
+                <div className="skill-item">
+                <i className="react">
+                  <FaReact />
                 </i>
+                  <span>React</span>
+                </div>
+                <div className="skill-item">
+                  <i className="nextjs">
+                    <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next.js" />
+                  </i>
+                  <span>Next.js</span>
+              </div>
+                <div className="skill-item">
+                  <i className="redux">
+                    <img src="https://cdn.worldvectorlogo.com/logos/redux.svg" alt="Redux" />
+                  </i>
+                  <span>Redux</span>
+            </div>
+                <div className="skill-item">
+                <i className="html">
+                  <AiFillHtml5 />
+                </i>
+                  <span>HTML5</span>
+                </div>
+                <div className="skill-item">
+                <i className="css">
+                  <BiLogoCss3 />
+                </i>
+                  <span>CSS3</span>
+                </div>
+                <div className="skill-item">
+                  <i className="tailwind">
+                    <img src="https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" alt="Tailwind CSS" />
+                  </i>
+                  <span>Tailwind</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="skill-category-wrapper">
+              <div className="category-title">Back-end</div>
+              <div className="skills-grid">
+                <div className="skill-item">
+                  <i className="node">
+                    <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="Node.js" />
+                  </i>
+                  <span>Node.js</span>
+                </div>
+                <div className="skill-item">
                 <i className="mongodb">
-                <SiSocketdotio />
-                                </i>
+                    <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="MongoDB" />
+                  </i>
+                  <span>MongoDB</span>
+                </div>
+                <div className="skill-item">
+                  <i className="mysql">
+                    <img src="https://www.svgrepo.com/download/303251/mysql-logo.svg" alt="MySQL" />
+                  </i>
+                  <span>MySQL</span>
+                </div>
+                <div className="skill-item">
+                  <i className="prisma">
+                    <img src="https://cdn.worldvectorlogo.com/logos/prisma-2.svg" alt="Prisma" />
+                  </i>
+                  <span>Prisma</span>
+                </div>
+                <div className="skill-item">
+                  <i className="redis">
+                    <img src="https://cdn.worldvectorlogo.com/logos/redis.svg" alt="Redis" />
+                  </i>
+                  <span>Redis</span>
+                </div>
+                <div className="skill-item">
+                  <i className="rest">
+                    <img src="https://cdn.worldvectorlogo.com/logos/rest-63.svg" alt="REST API" />
+                  </i>
+                  <span>REST API</span>
+                </div>
+                <div className="skill-item">
+                  <i className="aws">
+                    <img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS" />
+                  </i>
+                  <span>AWS</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="skill-category-wrapper">
+              <div className="category-title">Development Tools</div>
+              <div className="skills-grid">
+                <div className="skill-item">
+                  <i className="git">
+                    <img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="Git" />
+                  </i>
+                  <span>Git</span>
+                </div>
+                <div className="skill-item">
+                  <i className="github">
+                    <AiFillGithub />
+                  </i>
+                  <span>GitHub</span>
+          </div>
+                <div className="skill-item">
+                  <i className="docker">
+                    <img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="Docker" />
+                  </i>
+                  <span>Docker</span>
+                </div>
+                <div className="skill-item">
+                  <i className="linux">
+                    <img src="https://cdn.worldvectorlogo.com/logos/linux-tux.svg" alt="Linux" />
+                  </i>
+                  <span>Linux</span>
+                </div>
+                <div className="skill-item">
+                  <i className="figma">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" />
+                  </i>
+                  <span>Figma</span>
+                </div>
               </div>
             </div>
           </div>
@@ -375,11 +557,7 @@ const App = () => {
               {" "}
               <h1>My recent projects</h1>
             </div>
-            <div className="button">
-              <button>All</button>
-              <button>Web Design</button>
-              <button>UX Design</button>
-            </div>
+           
           </div>
           <div className="project-card">
             {data.map((item) => {
