@@ -7,10 +7,18 @@ import creative from "../image/creative.png"
 import blog from "../image/blog.png"
 import chat from "../image/chat.png"
 import taxi from "../image/taxi.png"
+import typing from "../image/typing.png"
 
 export const data = [
   {
     id: "0",
+    name: "Typing App",
+    link: "https://hash-type-ogcq.vercel.app/",
+    image: typing,
+    category: "",
+  },
+  {
+    id: "1",
     name: "Weather App",
     link: "https://tubular-valkyrie-62dca6.netlify.app",
     image: weather,
@@ -46,25 +54,5 @@ export const data = [
     image: authentication,
     category: "",
   },
-  {
-    id: "6",
-    name: "Tic-Tac-Toe",
-    link: "https://tic-tac-toe-red-xi.vercel.app/",
-    image: tictaktoe,
-    category: "",
-  },
-  {
-    id: "7",
-    name: "Mini Shop",
-    link: "https://mini-shop-seven.vercel.app/",
-    image: minishop,
-    category: "",
-  },
-  {
-    id: "8",
-    name: "UI design",
-    link: "https://gsap-design.vercel.app/",
-    image: gsap,
-    category: "",
-  },
+ 
 ];
