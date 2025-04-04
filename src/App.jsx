@@ -561,6 +561,42 @@ const App = () => {
                 </div>
               </div>
             </div>
+
+            <div className="skill-category-wrapper">
+              <div className="category-title">Platforms</div>
+              <div className="skills-grid">
+                <div className="skill-item">
+                  <i className="vscode">
+                    <img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" alt="VS Code" />
+                  </i>
+                  <span>VS Code</span>
+                </div>
+                <div className="skill-item">
+                  <i className="intellij">
+                    <img src="https://cdn.worldvectorlogo.com/logos/intellij-idea-1.svg" alt="IntelliJ IDEA" />
+                  </i>
+                  <span>IntelliJ IDEA</span>
+                </div>
+                <div className="skill-item">
+                  <i className="cursor">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm3 3l6 3-6 3V9z" fill="currentColor"/>
+                    </svg>
+                  </i>
+                  <span>Cursor</span>
+                </div>
+                <div className="skill-item">
+                  <i className="windsurf">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path d="M21 3v18H3V3h18m0-2H3C1.9 1 1 1.9 1 3v18c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2z"/>
+                      <path d="M16.7 15.3l-3-3c-.2-.2-.5-.3-.7-.3s-.5.1-.7.3l-3 3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3s.5-.1.7-.3L13 14l2.3 2.3c.2.2.4.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4z" fill="#00FFD1"/>
+                    </svg>
+                  </i>
+                  <span>Windsurf</span>
+                </div>
+                
+              </div>
+            </div>
           </div>
         </section>
 
