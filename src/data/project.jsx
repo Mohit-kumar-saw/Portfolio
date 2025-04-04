@@ -12,7 +12,7 @@ export const data = [
   {
     id: "0",
     name: "Weather App",
-    link: "tubular-valkyrie-62dca6.netlify.app",
+    link: "https://tubular-valkyrie-62dca6.netlify.app",
     image: weather,
     category: "",
   },

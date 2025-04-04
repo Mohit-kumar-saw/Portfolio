@@ -139,11 +139,23 @@ const App = () => {
     );
   });
 
+  const handleNavClick = (id) => {
+    const element = document.getElementById(id);
+    const headerOffset = 100;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <>
       <div className="container">
-        <div className="nav ">
-          <div ref={navRef} className="items ">
+        <div className="nav">
+          <div ref={navRef} className="items">
             <div className="logo flex-center">
               <div className="logo-left">M</div>
               <div className="logo-right">
@@ -155,25 +167,31 @@ const App = () => {
             <div className="list flex-center">
               <ul className="flex-center">
                 <li>
-                  <a href="#aboutSec">
+                  <a onClick={() => handleNavClick('aboutSec')}>
                     About <span className="line line1"></span>
                     <span className="line line2"></span>
                   </a>
                 </li>
                 <li>
-                  <a href="#sec2">
-                    Services<span className="line line1"></span>
+                  <a onClick={() => handleNavClick('experienceSec')}>
+                    Experience<span className="line line1"></span>
                     <span className="line line2"></span>
                   </a>
                 </li>
                 <li>
-                  <a href="#sec3">
+                  <a onClick={() => handleNavClick('skillsSec')}>
+                    Skills<span className="line line1"></span>
+                    <span className="line line2"></span>
+                  </a>
+                </li>
+                <li>
+                  <a onClick={() => handleNavClick('projectsSec')}>
                     Portfolio<span className="line line1"></span>
                     <span className="line line2"></span>
                   </a>
                 </li>
                 <li>
-                  <a href="#mapSec">
+                  <a onClick={() => handleNavClick('contactSec')}>
                     Contact<span className="line line1"></span>
                     <span className="line line2"></span>
                   </a>
@@ -183,10 +201,8 @@ const App = () => {
 
             <div className="contact">
               <button>
-                <p>
-                  <FaRegPaperPlane />
-                </p>
-                <a href="#mapSec">Let's Talk</a>
+                <p><FaRegPaperPlane /></p>
+                <a onClick={() => handleNavClick('contactSec')}>Let's Talk</a>
               </button>
             </div>
           </div>
@@ -198,15 +214,12 @@ const App = () => {
             <div className="text first-text">I'm Mohit</div>
             <div className="text sec-text">Web-Developer</div>
             <div className="buttons">
-              <a href="#mapSec" className="btn">
-                <p>
-                  <FiMail />
-                </p>
+              <a className="btn" onClick={() => handleNavClick('contactSec')}>
+                <p><FiMail /></p>
                 Hire me
               </a>
-
               <button className="link">
-                <a href="#sec3">See portfolio</a>
+                <a onClick={() => handleNavClick('projectsSec')}>See portfolio</a>
               </button>
             </div>
             <div className="about">
@@ -264,7 +277,7 @@ const App = () => {
           </div>
         </div>
 
-        <div id="aboutSec" className="section">
+        <section id="aboutSec" className="section">
           <h1>What do I help</h1>
           <p>
             As an artist-turned-MERN stack web developer, I bring a unique
@@ -273,14 +286,14 @@ const App = () => {
             visually appealing and highly functional web applications that truly
             resonate with users.
           </p>
-        </div>
+        </section>
 
-        <div className="experience-section">
+        <section id="experienceSec" className="experience-section">
           <div className="experience-header">
             <h2>Experience</h2>
             <div className="header-line"></div>
-          </div>
-          
+        </div>
+
           <div className="experience-timeline">
             <div className="timeline-item" ref={cardRef}>
               <div className="timeline-dot"></div>
@@ -374,9 +387,9 @@ const App = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div id="sec2" className="skills-section">
+        <section id="skillsSec" className="skills-section">
           <div className="skills-header">
             <h2>SKILLS</h2>
           </div>
@@ -549,9 +562,9 @@ const App = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div id="sec3" className="projects">
+        <section id="projectsSec" className="projects">
           <div className="top">
             <div className="heading">
               {" "}
@@ -560,22 +573,27 @@ const App = () => {
            
           </div>
           <div className="project-card">
-            {data.map((item) => {
-              "";
-              console.log(item.name);
-              return (
-                <div key={item.id} className="card-box">
-                  <a href={item.link}>
-                    <img id="project-img" src={item.image} alt="" />
-                  </a>
-                  <p id="title">{item.name}</p>
+            {data.map((project) => (
+              <div key={project.id} className="card-box">
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  <img 
+                    id="project-img" 
+                    src={project.image} 
+                    alt={project.name} 
+                  />
+                  <p id="title">{project.name}</p>
+                </a>
                 </div>
-              );
-            })}
+            ))}
           </div>
-        </div>
+        </section>
 
-        <div id="mapSec" className="map">
+        <section id="contactSec" className="map">
           <div className="map-top">
             <h1>Get in touch</h1>
           </div>
@@ -606,7 +624,7 @@ const App = () => {
               </form>
             </div>
           </div>
-        </div>
+        </section>
       </div>
       <div className="footer">
         <div className="mid-footer">
@@ -619,7 +637,7 @@ const App = () => {
               <p>
                 <FiMail />
               </p>
-              Hire me
+              <a onClick={() => handleNavClick('contactSec')}>Hire me</a>
             </button>
           </div>
           <div className="mid-right">
@@ -656,25 +674,31 @@ const App = () => {
           <div className="list flex-center">
             <ul className="flex-center">
               <li>
-                <a href="#aboutSec">
+                <a onClick={() => handleNavClick('aboutSec')}>
                   About <span className="line line1"></span>
                   <span className="line line2"></span>
                 </a>
               </li>
               <li>
-                <a href="#sec2">
-                  Services<span className="line line1"></span>
+                <a onClick={() => handleNavClick('experienceSec')}>
+                  Experience<span className="line line1"></span>
                   <span className="line line2"></span>
                 </a>
               </li>
               <li>
-                <a href="#sec3">
+                <a onClick={() => handleNavClick('skillsSec')}>
+                  Skills<span className="line line1"></span>
+                  <span className="line line2"></span>
+                </a>
+              </li>
+              <li>
+                <a onClick={() => handleNavClick('projectsSec')}>
                   Portfolio<span className="line line1"></span>
                   <span className="line line2"></span>
                 </a>
               </li>
               <li>
-                <a href="#mapSec">
+                <a onClick={() => handleNavClick('contactSec')}>
                   Contact<span className="line line1"></span>
                   <span className="line line2"></span>
                 </a>
