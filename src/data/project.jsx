@@ -13,7 +13,7 @@ export const data = [
   {
     id: "0",
     name: "Typing App",
-    link: "https://hash-type-ogcq.vercel.app/",
+    link: "https://hash-type-ogcq.vercel.app/auth",
     image: typing,
     category: "",
   },
